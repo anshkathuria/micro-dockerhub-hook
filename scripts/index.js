@@ -16,5 +16,5 @@ module.exports = (repoName, tag) => {
       return match && match[0] === image
     })
 
-  return scripts[hook]
+  return scripts[hook] && `${scripts[hook]} ${tag || ''}`
 }
